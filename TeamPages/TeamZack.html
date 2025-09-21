@@ -27,18 +27,18 @@
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
-                <a href="#">Binky</a>
-                <a href="#">Brady</a>
-                <a href="#">Canon</a>
-                <a href="TeamPages/TeamZack.html">Cookie</a>
-                <a href="#">Dylan</a>
-                <a href="#">Jay</a>
-                <a href="#">Joe</a>
-                <a href="#">Josh</a>
-                <a href="#">Mikey</a>
-                <a href="#">Nico</a>
-                <a href="#">Ricky</a>
-                <a href="#">Tyler</a>
+                <a href="TeamBinky.html">Binky</a>
+                <a href="TeamBrady.html">Brady</a>
+                <a href="TeamCanon.html">Canon</a>
+                <a href="TeamZack.html">Cookie</a>
+                <a href="TeamDylan.html">Dylan</a>
+                <a href="TeamJay.html">Jay</a>
+                <a href="TeamJoe.html">Joe</a>
+                <a href="TeamJosh.html">Josh</a>
+                <a href="TeamMikey.html">Mikey</a>
+                <a href="TeamNico.html">Nico</a>
+                <a href="TeamRicky.html">Ricky</a>
+                <a href="TeamTyler.html">Tyler</a>
               </div>
             </div>
 
@@ -69,99 +69,7 @@
           <h3>Matches</h3>
           <p>Match data goes here...</p>
         </div>
-        <div class="col">
-          <h3>Roster</h3>
-          <table>
-            <tr>
-              <td>NAME</td>
-              <td>Rounds Faught</td>
-              <td>Rounds Won</td>
-              <td>Rounds Lost</td>
-              <td>Round 3s Faught</td>
-              <td>Round 3s Won</td>
-            </tr>
-            <tr>
-              <td>mewtwo</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>saki - mvc</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>grant - mvc</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>nega scott</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>cyber rain</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>joe</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>megatron</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>rikuo</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>big chicken</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>metal sonic</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-          </table>
-        </div>
+        <div class="col" id="roster"></div>
       </div>
 
       <div class="team-news-card">
@@ -171,5 +79,11 @@
         </ul>
       </div>
     </main>
+
+    <script src="../Assets/roster.js"></script>
+    <script>
+      // Call loadRoster with the name of this team
+      loadRoster("Team Zack");
+    </script>
   </body>
 </html>
