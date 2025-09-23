@@ -18,7 +18,7 @@ async function loadRoster(teamName) {
     table.cellPadding = "5";
 
     const headerRow = table.insertRow();
-    ["Name", "Matches Fought", "Round Wins", "Rounds Fought", "Rounds Lost", "Round 3s Fought", "Round 3s Won"].forEach((text) => {
+    ["Name", "Matches Fought", "Rounds Fought", "Round Wins", "Rounds Lost", "Round 3s Fought", "Round 3s Won"].forEach((text) => {
       const th = document.createElement("th");
       th.innerText = text;
       headerRow.appendChild(th);
@@ -28,8 +28,8 @@ async function loadRoster(teamName) {
       const row = table.insertRow();
       row.insertCell().innerText = player.Name;
       row.insertCell().innerText = player.matchesFought;
-      row.insertCell().innerText = player.roundsWon;
       row.insertCell().innerText = player.roundsFought;
+      row.insertCell().innerText = player.roundsWon;
       row.insertCell().innerText = player.roundsLost;
       row.insertCell().innerText = player.round3sFought;
       row.insertCell().innerText = player.round3sWon;

@@ -95,23 +95,26 @@
   display: block;
 }
 
-.three-cols {
-  display: flex;
-  gap: var(--g);
+/* homepage(index) styling */
+
+.homeContentTilegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   margin-top: 8px;
+  justify-items: center;
 }
-.col {
-  flex: 1;
-  min-width: 0;
+.homeContentTile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 500px;
-  width: 300px;
+  width: 800px;
   background: #fff;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 18px;
 }
 
 /* responsive */
@@ -128,30 +131,16 @@
 }
 
 /* Team page styling */
-.record-card {
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 10px rgba(16, 24, 40, 0.03);
-  padding: 18px;
-  width: 33%;
-  align-items: center;
-}
-.record-card h2 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  color: #1f2937;
-}
 
-.roster-card {
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 10px rgba(16, 24, 40, 0.03);
-  padding: 18px;
-  width: 100%;
-  margin-top: 1rem;
+.teamPageContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 25px;
 }
 
 .team-summary-card {
@@ -160,8 +149,17 @@
   gap: 1rem;
   border: 1px solid #ddd;
   padding: 1rem;
+  min-width: 600px;
   max-width: 1200px;
   margin: 1.5rem auto;
+}
+
+.team-roster-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: #fff;
+  max-width: 800px;
+  margin: 1.5rem auto; /* space above + center on page */
 }
 
 .team-logo {
@@ -177,26 +175,14 @@
   flex: 1; /* take up remaining width */
 }
 
-.team-info-card {
-  display: flex;
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 1.5rem auto; /* space above + center on page */
-}
-
-.col {
-  flex: 1;
+.team-match-card {
   border: 1px solid #ddd;
   padding: 1rem;
   background: #fff;
-}
-
-.team-news-card {
-  border: 1px solid #ddd;
-  padding: 1rem;
   max-width: 800px;
-  margin: 1.5rem auto; /* center on page */
-  background: #fff;
+  min-width: 600px;
+  margin: 1.5rem auto; /* space above + center on page */
+  text-align: center;
 }
 
 /* Make sure heading is at top, items follow */
@@ -211,4 +197,51 @@
   list-style-type: disc;
   padding-left: 1.5rem; /* indent bullets */
   margin: 0;
+}
+
+.team-news-card {
+  grid-column: 1 / span 2;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.teamThemeVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Weekly match page styling */
+
+.matchTileGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 1.5rem auto; /* center on page */
+  padding: 0 1rem; /* padding on sides */
+}
+
+.matchTile {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  background: #f4f4f4;
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.matchInfoHeader {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0b6efd;
 }

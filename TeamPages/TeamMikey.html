@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Template team - info page</title>
+    <title>Teampage template</title>
 
     <link rel="stylesheet" href="../Assets/style.css" />
   </head>
@@ -14,9 +14,25 @@
 
         <nav class="main-nav">
           <ul>
-            <li>
-              <button class="nav-button"><a href="">Matches</a></button>
-            </li>
+            <div class="dropdown" id="matchesDropdown">
+              <button class="dropbtn">
+                Matches
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../ReferenceFiles/WeeklyMatchPageTemplate.html">test week</a>
+                <a href="">Week1</a>
+                <a href="">Week2</a>
+                <a href="">Week3</a>
+                <a href="">Week4</a>
+                <a href="">Week5</a>
+                <a href="">Week6</a>
+                <a href="">Playoffs Week1</a>
+                <a href="">Playoffs Week2</a>
+                <a href="">Playoffs Week3</a>
+                <a href="">Championship</a>
+              </div>
+            </div>
             <li>
               <button class="nav-button"><a href="">News</a></button>
             </li>
@@ -53,24 +69,30 @@
       </div>
     </header>
 
-    <main>
+    <div class="teamPageContentGrid">
+      <div class="teamThemeVideo">
+        <video width="320" height="240" controls autoplay muted loop>
+          <source src="video goes here" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div class="team-summary-card">
         <img class="team-logo" src="" alt="Team logo" />
         <div class="team-summary-info">
-          <div class="info-item">Team name goes here</div>
-          <div class="info-item">Owner goes here</div>
+          <div class="info-item">Team Mikey</div>
+          <div class="info-item">Owner: Mikey</div>
           <div class="info-item">Record 0-0</div>
-          <div class="info-item">Rank: TBD</div>
+          <div class="info-item">League Rank: TBD</div>
         </div>
       </div>
 
-      <div class="team-info-card">
-        <div class="col">
-          <h3>Matches</h3>
-          <p>Match data goes here...</p>
-        </div>
-        <div class="col" id="roster"></div>
+      <div class="team-match-card">
+        <h3>Matches</h3>
+        <p>Match data goes here...</p>
       </div>
+
+      <div class="team-roster-card" id="roster"></div>
 
       <div class="team-news-card">
         <h3>Team News</h3>
@@ -78,7 +100,7 @@
           <li>Team has no news at this time</li>
         </ul>
       </div>
-    </main>
+    </div>
 
     <script src="../Assets/roster.js"></script>
     <script>
